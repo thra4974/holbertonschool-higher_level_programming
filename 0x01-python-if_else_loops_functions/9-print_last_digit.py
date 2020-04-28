@@ -5,3 +5,4 @@ def print_last_digit(number):
     if number < 0:
         last *= -1
     print("{:d}".format(last))
+    return (last)
