@@ -13,7 +13,7 @@ if number > 0:
     elif last < 6 and last != 0:
         print("Last digit of {:d} is {:d} and is less than 6 and not 0".format
               (number, last))
-elif number < 0:
+else:
     if last == 0:
         print("Last digit of {:d} is {:d} and is 0".format
               (number, last))
