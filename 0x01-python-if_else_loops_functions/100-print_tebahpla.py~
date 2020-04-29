@@ -1,0 +1,7 @@
+#!/usr/bin/python3
+for n in reversed(range(ord('z'), ord('a'))):
+    if n % 2 == 0:
+        n = chr(n).lower()
+    else:
+        n = chr(n).upper()
+    print("{}".format(n), end='')
