@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-last = abs(number) % 10
+last = number % 10
 nLast = last*-1
 if number > 0:
     if last > 5:
