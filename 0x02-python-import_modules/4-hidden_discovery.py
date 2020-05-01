@@ -4,11 +4,11 @@ import hidden_4
 
 def main():
     names = dir(hidden_4)
-    for name in names:
-        if name[0] == '_':
+    for arg in names:
+        if arg[0] == '_':
             pass
         else:
-            print("{}".format(name))
+            print("{}".format(arg))
 
 if __name__ == "__main__":
 
