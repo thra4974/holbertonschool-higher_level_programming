@@ -3,6 +3,5 @@
 
 def print_list_integer(my_list=[]):
 
-    li = ''.join(str(n) for n in my_list)
-    for n in li:
-        print(str.format(n))
+    for n in range(0, len(my_list)):
+        print("{:d}".format(my_list[n]))
