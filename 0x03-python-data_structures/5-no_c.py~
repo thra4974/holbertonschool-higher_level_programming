@@ -1,0 +1,13 @@
+#!/usr/bin/python3
+
+
+def no_c(my_string):
+        ls = list(my_string)
+        ls[1] = ""
+        ls[1:2] = []
+        del(ls[1])
+
+        i = ls.index("c")
+        del(ls[i])
+        my_string = "".join(ls)
+        return my_string
