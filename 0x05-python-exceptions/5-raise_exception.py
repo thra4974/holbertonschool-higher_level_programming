@@ -2,6 +2,6 @@
 
 
 def raise_exception():
-    x = -5
-    if x < 0:
-        raise Exception("Exception raised")
+    str1 = "Holberton"
+    if not type(str) is int:
+        raise TypeError("Exception raised")
