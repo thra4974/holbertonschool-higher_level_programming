@@ -48,10 +48,10 @@ class Square:
         prints square using character #
         """
         if self.__size == 0:
-            print()
+            print("")
             return
         for n in range(self.__size):
             for n in range(self.__size):
                 print("#", end=' ')
-            print()
+            print("")
         return
