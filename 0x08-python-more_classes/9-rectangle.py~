@@ -4,6 +4,7 @@
 
 class Rectangle:
     """ rectangle w/ priv instance attributes width and height """
+
     number_of_instances = 0
     print_symbol = "#"
 
@@ -83,7 +84,7 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return str_rectangle
         for n in range(self.height):
-            str_rectangle += "#" * self.width
+            str_rectangle += str(self.print_symbol) * self.width
             if n < self.height - 1:
                 str_rectangle += "\n"
         return str_rectangle
@@ -101,3 +102,17 @@ class Rectangle:
         """
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        """
+        return rectangle with largest area
+        """
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() >= rect_2.area():
+            return rect_1
+        else:
+            return rect_2
