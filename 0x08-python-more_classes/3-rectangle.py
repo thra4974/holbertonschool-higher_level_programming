@@ -73,11 +73,13 @@ class Rectangle:
 
     def __str__(self):
         """
-        returns string intepretation og rectangle
+        returns informal string intepretation of rectangle
         """
         str_rectangle = ""
         if self.width == 0 or self.height == 0:
             return str_rectangle
         for n in range(self.height):
-            str_rectangle += "#" * self.width)
+            str_rectangle += "#" * self.width
+            if n < self.height - 1:
+                str_rectangle += "\n"
         return str_rectangle

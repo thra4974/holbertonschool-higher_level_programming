@@ -80,6 +80,8 @@ class Rectangle:
             return str_rectangle
         for n in range(self.height):
             str_rectangle += "#" * self.width
+            if n < self.height - 1:
+                str_rectangle += "\n"
         return str_rectangle
 
     def __repr__(self):
