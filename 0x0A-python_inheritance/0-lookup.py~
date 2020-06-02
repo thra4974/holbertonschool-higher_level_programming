@@ -1,8 +1,0 @@
-#!/usr/bin/python3
-
-
-def lookup(obj):
-    ret = []
-    for att in obj:
-        ret = list(getattr(obj, att))
-    return ret
