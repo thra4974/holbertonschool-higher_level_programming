@@ -15,9 +15,15 @@ class Rectangle(BaseGeometry):
         Args:
             width/ height
         """
-        if self.integer_validator("width", width):
-            self.__width = width
-        if self.integer_validator("height", height):
-            self.__height = height
+        self.integer_validator("width", width)
+        self.__width = width
+        self.integer_validator("height", height)
+        self.__height = height
 
-            def area
+    def area(self):
+        """are of rectangle"""
+        return self.__width * self.__height
+
+    def __str__(self):
+        """ return string rep of Rect"""
+        return "[Rectangle] {}/{}".format(self.__width, self.__height)
