@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """constains class_to_json function"""
-import json
+
 
 
 def class_to_json(obj):
