@@ -14,50 +14,13 @@ class Square(Rectangle):
 
     @property
     def size(self):
-        """ gets width"""
+        """ gets size"""
         return self.__size
 
     @size.setter
     def size(self, value):
-        """sets width to value and validates size and type"""
-        if type(value) is not int:
-            raise TypeError("width must be an integer")
-        if value <= 0:
-            raise ValueError("width must be > 0")
-        else:
-            self.__size = value
-
-    @property
-    def x(self):
-        """gets x"""
-        return self.__x
-
-    @x.setter
-    def x(self, value):
-        """set x to value and validates size and type"""
-        if type(value) is not int:
-            raise TypeError("x must be an integer")
-        if value < 0:
-            raise ValueError("x must be >= 0")
-        self.__x = value
-
-    @property
-    def y(self):
-        """ gets y"""
-        return self.__y
-
-    @y.setter
-    def y(self, value):
-        """sets y value and validates size and type"""
-        if type(value) is not int:
-            raise TypeError("y must be an integer")
-        if value < 0:
-            raise ValueError("y must be >= 0")
-        self.__y = value
-
-    def area(self):
-        """Returns area of Rectangle instance"""
-        return self.size * self.size
+        """sets width and height (size) to value"""
+        self.__size = value
 
     def display(self):
         """ prints Rectangle instance with #"""
