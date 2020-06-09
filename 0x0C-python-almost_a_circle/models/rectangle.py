@@ -88,3 +88,12 @@ class Rectangle(Base):
         """returns string rep of Rectangle"""
         return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}"\
             .format(self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args):
+        """assigns argument to each attribute"""
+        if len(args) > 0:
+            c = 0
+            att = ["id", "width", "height", "x", "y"]
+            for arg in args:
+                setattr(self, att[c], args[c])
+                c += 1
