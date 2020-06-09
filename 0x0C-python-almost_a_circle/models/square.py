@@ -57,7 +57,7 @@ class Square(Rectangle):
 
     def area(self):
         """Returns area of Rectangle instance"""
-        return self.width * self.height
+        return self.size * self.size
 
     def display(self):
         """ prints Rectangle instance with #"""
