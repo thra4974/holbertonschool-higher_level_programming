@@ -1,9 +1,12 @@
 #!/usr/bin/python3
 import unittest
+import json
 import sys
 import pep8
 from models import base
 from models.base import Base
+from models.rectangle import Rectangle
+from models.square import Square
 
 
 class TestBaseDocumentation(unittest.TestCase):
@@ -27,8 +30,8 @@ class TestBasePep8(unittest.TestCase):
     def test_pep8_format(self):
         """test base module for pep8 formatting"""
         pep8style = pep8.StyleGuide(quiet=True)
-        file1 = 'module/base.py'
+        file1 = 'models/base.py'
         file2 = 'tests/test_models/test_base.py'
-        result = pep8style.check_files(['file1.py', 'file2.py'])
+        result = pep8style.check_files([file1, file2])
         self.assertEqual(result.total_errors, 0,
                          "Found code style errors (and warnings).")
