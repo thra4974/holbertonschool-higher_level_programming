@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Contains Base module"""
 import json
+import csv
 
 
 class Base:
@@ -67,3 +68,24 @@ class Base:
             for i in range(len(buf_list)):
                 buf_list[i] = cls.create(**buf_list[i])
         return buf_list
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """serializes in CSV"""
+        buf_list = []
+        class_name = cls.__name__
+        csv_ext = ".csv"
+        filename = class_name + csv_ext
+        if list_objs is not None:
+            for obj in list_objs:
+                buf_list.append(obj.to_dictionary())
+        with open(filename, "w+", encoding="utf-8") as f:
+            f.write(buf_list)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """deserializes in CSV"""
+        buf_list = []
+        class_name = cls.__name__
+        csv_ext = ".csv"
+        filename = class_name + csv_ext
