@@ -35,3 +35,23 @@ class TestBasePep8(unittest.TestCase):
         result = pep8style.check_files([file1, file2])
         self.assertEqual(result.total_errors, 0,
                          "Found code style errors (and warnings).")
+
+
+class Test_Base(unittest.TestCase):
+    """Tests for class Base model"""
+    @classmethod
+    def setUp_Class(cls):
+        """set up class instance"""
+        Base._Base_nb_objects = 0
+        cls.b1 = Base()
+        cls.b2 = Base(98)
+        cls.b3 = Base("one")
+        cls.b4 = Base(1.1)
+        cls.rec = Rectangle(1, 1, 0, 0, 1)
+
+    def test_id(self):
+        """tests for id attribute"""
+        self.assertEqual(self.b1.id, 1)
+        self.assertEqual(self.b2.id, 98)
+        self.assertEqual(self.b3.id, "one")
+        self.assertEqual(self.b4.id, 1.1)

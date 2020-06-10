@@ -63,10 +63,13 @@ class Base:
         class_name = cls.__name__
         json_ext = ".json"
         filename = class_name + json_ext
-        with open(filename, 'r', encoding="utf-8") as f:
-            buf_list = cls.from_json_string(f.read())
-            for i in range(len(buf_list)):
-                buf_list[i] = cls.create(**buf_list[i])
+        try:
+            with open(filename, 'r', encoding="utf-8") as f:
+                buf_list = cls.from_json_string(f.read())
+                for i in range(len(buf_list)):
+                    buf_list[i] = cls.create(**buf_list[i])
+        except:
+            return []
         return buf_list
 
     @classmethod
