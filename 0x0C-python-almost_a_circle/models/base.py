@@ -54,3 +54,16 @@ class Base:
             dumbass = cls(5)
         cls.update(dumbass, **dictionary)
         return dumbass
+
+    @classmethod
+    def load_from_file(cls):
+        """ returns list of instances"""
+        buf_list = []
+        class_name = cls.__name__
+        json_ext = ".json"
+        filename = class_name + json_ext
+        with open(filename, 'r', encoding="utf-8") as f:
+            buf_list = cls.from_json_string(f.read())
+            for i in range(len(buf_list)):
+                buf_list[i] = cls.create(**buf_list[i])
+        return buf_list
