@@ -52,6 +52,6 @@ class Square:
             return
         for n in range(self.__size):
             for n in range(self.__size):
-                print("#", end=' ')
+                print("#", end='')
             print("")
         return
