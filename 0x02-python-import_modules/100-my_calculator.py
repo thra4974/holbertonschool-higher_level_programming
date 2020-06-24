@@ -24,7 +24,7 @@ if __name__ == "__main__":
         res = mul(a, b)
 
     elif operator == "/":
-        div(a, b)
+        res = div(a, b)
 
     else:
         print("Unknown operator. Available operators: +, -, * and /")
