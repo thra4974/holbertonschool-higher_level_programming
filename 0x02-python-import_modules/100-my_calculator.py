@@ -16,13 +16,13 @@ if __name__ == "__main__":
     if operator == "+":
         res = add(a, b)
 
-    if operator == "-":
+    elif operator == "-":
         res = sub(a, b)
 
-    if operator == "*":
+    elif operator == "*":
         res = mul(a, b)
 
-    if operator == "/":
+    elif operator == "/":
         div(a, b)
 
     else:
