@@ -1,5 +1,1 @@
-# High Level Programming for Holberton School
-
-# Trimester 2
-
-# Python
+Higher Level programming in Python for Holberton School

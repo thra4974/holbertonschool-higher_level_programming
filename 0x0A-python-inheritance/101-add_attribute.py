@@ -5,8 +5,4 @@
 def add_attribute(my_obj, name, new_val):
     """ adds new attribute to an object if possible"""
 
-    if not hasattr(my_obj, '__dict__'):
-        raise TypeError("can't add new attribute")
-    else:
-        hasattr(my_obj, '__dict__')
-        setattr(my_obj, name, new_val)
+    if '__dict__' not in dir(obj)
